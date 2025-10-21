@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Consultor Técnico Inteligente - Otimização Industrial</title>
+    <style> 
+        body { font-family: sans-serif; margin: 20px; background-color: #e8f5e9; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 30px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); }
+        h1 { color: #004d40; }
+        label { display: block; margin-top: 15px; font-weight: bold; }
+        textarea, input[type="text"] { width: 100%; padding: 10px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; }
+        button { background-color: #388e3c; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; margin-top: 25px; font-size: 16px; transition: background-color 0.3s; }
+        button:hover { background-color: #2e7d32; }
+        #status { margin-top: 20px; padding: 15px; border-radius: 4px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Consultor Técnico Industrial (Powered by Gemini)</h1>
+        <form id="consultorForm">
+            <label for="setor">1. Qual o Processo/Setor em análise (Ex: Manutenção Preditiva, Linha de Produção, Controle de Qualidade):</label>
+            <input type="text" id="setor" name="setor" required>
+
+            <label for="tecnologia">2. Qual a Tecnologia ou Equipamento Principal (Ex: CLP S7-1200, Máquina CNC Haas, Robô KUKA):</label>
+            <input type="text" id="tecnologia" name="tecnologia" required>
+
+            <label for="problema">3. Descreva o Problema/Desafio Principal (Gargalo, Alta falha, Custo alto):</label>
+            <textarea id="problema" name="problema" rows="3" required></textarea>
+            
+            <label for="performance">4. Descreva as Métricas de Performance Atuais (Ex: OEE=65%, MTBF=15h, 30 paradas/mês):</label>
+            <input type="text" id="performance" name="performance" required>
+
+            <button type="submit">Analisar e Gerar Relatório Técnico</button>
+        </form>
+
+        <div id="status"></div>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
